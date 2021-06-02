@@ -43,7 +43,7 @@
 
 <body>
     <div id='app'>
-        <p>SCORE: {{ score }}</p>
+        <!-- <p>SCORE: {{ score }}</p> -->
         <div id='stage'>
             <div class='cell' v-for="i in stage_cells_count" :class="{
 							 head: snake_head_index === i - 1,
@@ -51,11 +51,11 @@
 							 fruit: fruit_index === i - 1,
 							 }"></div>
         </div>
-
-        <p v-if='is_gameover'>
+        <button onclick="location.reload()">RETRY</button>
+        <!-- <p v-if='is_gameover'>
             GAME OVER<br>
-            <button onclick="location.reload()">RETRY</button>
-        </p>
+            
+        </p> -->
     </div>
 
     <script>
